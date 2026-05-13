@@ -1,13 +1,92 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>TempScale Precision</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/src/index.css">
+</head>
+<body>
+    <!-- TopAppBar -->
+    <header>
+        <div class="header-left">
+            <span class="material-symbols-outlined" data-icon="thermostat">thermostat</span>
+            <h1 class="header-title">TempScale</h1>
+        </div>
+        <button class="btn-icon">
+            <span class="material-symbols-outlined" data-icon="settings">settings</span>
+        </button>
+    </header>
+
+    <!-- Main Content Canvas -->
+    <main>
+        <!-- Central Conversion Card -->
+        <div class="card">
+            <div class="card-header">
+                <span class="label-caps">Precision Converter</span>
+                <h2 class="card-title">Temperature Unit Conversion</h2>
+            </div>
+            
+            <!-- Input Group -->
+            <div class="form-group">
+                <label class="label-caps" for="temp-input">Value to Convert</label>
+                <input class="input-field" id="temp-input" placeholder="0.0" type="number"/>
+            </div>
+
+            <!-- Unit Toggle -->
+            <div class="unit-toggle" id="unit-toggle-group">
+                <button id="btn-c2f" class="toggle-btn active">
+                    Celsius to Fahrenheit
+                </button>
+                <button id="btn-f2c" class="toggle-btn">
+                    Fahrenheit to Celsius
+                </button>
+            </div>
+
+            <!-- Convert Action -->
+            <button id="btn-convert" class="btn-primary">
+                <span class="material-symbols-outlined" data-icon="sync_alt">sync_alt</span>
+                Convert
+            </button>
+
+            <!-- Result Section -->
+            <div id="result-section" class="result-section">
+                <p class="label-caps" style="margin-bottom: 16px;">Converted Temperature</p>
+                <div style="text-align: center;">
+                    <span id="result-temp" class="result-temp">--</span>
+                    <p id="result-context" class="result-context"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Utility Context Info -->
+        <div class="utility-grid">
+            <div class="utility-card">
+                <span class="material-symbols-outlined utility-icon" data-icon="info">info</span>
+                <p class="label-caps utility-title">Standard Reference</p>
+                <p class="utility-text">Absolute Zero: -273.15&deg;C</p>
+            </div>
+            <div class="utility-card">
+                <span class="material-symbols-outlined utility-icon" data-icon="history">history</span>
+                <p class="label-caps utility-title">Recent Activity</p>
+                <p id="recent-activity" class="utility-text">No recent conversions</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="label-caps">Tepscale OASIS INFOBYTE</div>
+        <div class="footer-links">
+            <a class="footer-link" href="#">Privacy</a>
+            <a class="footer-link" href="#">Terms</a>
+            <a class="footer-link" href="#">Support</a>
+        </div>
+        <p class="footer-copyright">&copy; 2024 Tepscale OASIS INFOBYTE. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
 </html>
 
