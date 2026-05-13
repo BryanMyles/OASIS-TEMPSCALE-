@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-headline-md: "Inter", sans-serif;
+  --font-label-caps: "Inter", sans-serif;
+  --font-headline-lg-mobile: "Inter", sans-serif;
+  --font-body-sm: "Inter", sans-serif;
+  --font-body-lg: "Inter", sans-serif;
+  --font-headline-lg: "Inter", sans-serif;
+
+  --color-primary: #00459a;
+  --color-on-primary: #ffffff;
+  --color-surface: #f9f9fc;
+  --color-surface-variant: #e2e2e5;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f3f3f6;
+  --color-surface-container-high: #e8e8ea;
+  --color-surface-container-highest: #e2e2e5;
+  --color-on-surface: #1a1c1e;
+  --color-on-surface-variant: #424753;
+  --color-outline: #727785;
+  --color-outline-variant: #c2c6d5;
+  --color-secondary: #006398;
+  --color-primary-fixed-dim: #aec6ff;
+  --color-inverse-surface: #2f3133;
+
+  --spacing-margin-mobile: 16px;
+  --spacing-margin-desktop: 48px;
+  --spacing-gutter: 24px;
+}
+
+@layer utilities {
+  .shadow-clinical {
+    box-shadow: 0 4px 20px rgba(0, 82, 200, 0.08);
+  }
+}
